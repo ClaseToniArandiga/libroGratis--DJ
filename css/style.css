@@ -1,0 +1,194 @@
+:root{
+  --bg-1: #041226;
+  --bg-2: #08172a;
+  --accent-1: #5b8cff;
+  --accent-2: #9b56ff;
+  --muted: #9aa6b2;
+  --card: rgba(255,255,255,0.04);
+  --radius: 12px;
+  --max-width: 1100px;
+  --gap: 24px;
+  --content-padding: 24px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:#eaf0f8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:var(--content-padding);
+}
+
+.hero{
+  display:grid;
+  grid-template-columns: 1fr 420px;
+  gap:var(--gap);
+  align-items:center;
+  padding:48px 0;
+}
+
+.hero-copy h1{
+  margin:0 0 18px 0;
+  font-size:48px;
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1.02;
+}
+
+.hero-copy h1 span{display:block;color:var(--accent-1);font-weight:700}
+.hero-copy h1 strong{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.lead{
+  margin:0 0 28px 0;
+  color:var(--muted);
+  max-width:65ch;
+}
+
+.signup-form{
+  background:var(--card);
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(2,8,23,0.6);
+  width:100%;
+  max-width:720px;
+}
+
+.form-row{display:flex;gap:12px;align-items:center}
+.form-row input[type="email"]{
+  flex:1;
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.08);
+  padding:14px 16px;
+  color:inherit;
+  border-radius:10px;
+  outline: none;
+  font-size:15px;
+}
+.form-row input::placeholder{color:rgba(230,236,243,0.22)}
+
+.form-row button{
+  background:linear-gradient(90deg,var(--accent-1),var(--accent-2));
+  border:0;
+  color:white;
+  padding:14px 20px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(91,140,255,0.14);
+}
+.form-row button:hover{transform:translateY(-1px)}
+.form-row button:active{transform:translateY(0)}
+
+.note{margin-top:10px;font-size:13px;color:var(--muted)}
+
+.hero-image figure{margin:0}
+.hero-image img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:0 14px 40px rgba(2,8,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:18px 0;margin-top:48px}
+.site-footer small{color:var(--muted)}
+
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+/* Accessibility focus styles */
+button:focus, input:focus{box-shadow:0 0 0 3px rgba(91,140,255,0.12);border-color:var(--accent-1)}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;grid-auto-rows:auto;padding:36px 0}
+  .hero-image{order:-1}
+  .hero-copy h1{font-size:40px}
+}
+
+@media (max-width:520px){
+  :root{--content-padding:16px}
+  .hero-copy h1{font-size:28px}
+  .form-row{flex-direction:column;align-items:stretch}
+  .form-row button{width:100%}
+}
+
+@import url('reset.css');
+
+
+
+:root {
+  /* Fondos */
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #1a1f2e;
+  --bg-card: #141824;
+  
+  /* Acentos */
+  --accent-blue: #4d6fff;
+  --accent-purple: #7c3aed;
+  --accent-pink: #ec4899;
+  --accent-yellow: #fbbf24;
+  
+  /* Texto */
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  
+  /* Bordes */
+  --border-subtle: #1e293b;
+  
+  /* Superposiciones */
+  --overlay-dark: rgba(10, 14, 26, 0.8);
+}
+
+
+
+
+
+.hero {
+    display: flex;
+    gap: 3.125rem;
+    align-items: center;
+    justify-content: center;
+}
+.hero-content {
+    max-width: 36rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem
+}
+.title {
+   background: linear-gradient(135deg, #4d6fff 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  
+
+}
+.lead {
+}
+.signup-form {
+    
+}
+.visually-hidden {
+}
+.form-row {
+}
+.note {
+}
+.hero-image {
+}
+.site-footer {
+}
